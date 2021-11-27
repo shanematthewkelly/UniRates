@@ -7,6 +7,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.unirates.navigation.BottomNav
 import com.example.unirates.screens.home.Home
 import com.example.unirates.ui.theme.UniRatesTheme
 
@@ -26,7 +27,7 @@ fun MyApp() {
         Surface(
             color = MaterialTheme.colors.background)
             {
-                Home(Modifier)
+                BottomNav()
             }
     }
 }

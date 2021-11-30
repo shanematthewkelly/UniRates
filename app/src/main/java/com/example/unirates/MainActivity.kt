@@ -23,12 +23,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     UniRatesTheme {
-        // Parent Widget
-        Surface(
-            color = MaterialTheme.colors.background)
-            {
-                BottomNav()
-            }
+        BottomNav()
     }
 }
 

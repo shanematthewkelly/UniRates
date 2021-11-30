@@ -43,7 +43,7 @@ import com.example.unirates.helpers.Scale
         val destination = navBackStackEntry?.destination
 
             BottomNavigation(
-                backgroundColor = Color.Black,
+                backgroundColor = MaterialTheme.colors.secondary,
                 elevation = 8.dp,
                 modifier = Modifier
                     .padding(
@@ -74,7 +74,7 @@ import com.example.unirates.helpers.Scale
         controller: NavHostController
     ) {
         BottomNavigationItem(
-            selectedContentColor = Color.White,
+            selectedContentColor = MaterialTheme.colors.surface,
             alwaysShowLabel = false,
             icon = {
                 Icon(

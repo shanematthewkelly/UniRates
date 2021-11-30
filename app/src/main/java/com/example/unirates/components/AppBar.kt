@@ -23,10 +23,10 @@ fun CustomAppBar(
     title: String = "",
     menuItem1: ImageVector = Icons.Default.MoreVert,
     menuItem2: ImageVector = Icons.Default.MoreVert,
-    menuItemColors: Color = Color.Black,
+    menuItemColors: Color = MaterialTheme.colors.secondary,
 ) {
     TopAppBar(
-        backgroundColor = Color.White,
+        backgroundColor = MaterialTheme.colors.surface,
         modifier = Modifier
             .height(80.dp)
             .padding(start = 15.dp),
@@ -36,7 +36,7 @@ fun CustomAppBar(
             AppBarItems(
                 menuItem1,
                 menuItem2,
-                menuItemColors)
+                menuItemColors,)
                   },
         navigationIcon = { UserPhoto() }
     )

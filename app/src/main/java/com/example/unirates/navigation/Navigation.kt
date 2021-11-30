@@ -19,6 +19,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.unirates.helpers.Scale
+import com.example.unirates.helpers.ThemeMode
 import com.example.unirates.ui.theme.BottomNavDarkIcons
 import com.example.unirates.ui.theme.PrimaryLight
 
@@ -76,14 +77,9 @@ import com.example.unirates.ui.theme.PrimaryLight
         destination: NavDestination?,
         controller: NavHostController
     ) {
-       val isDarkMode = if(isSystemInDarkTheme()) {
-           PrimaryLight
-        } else {
-           Color.White
-       }
 
         BottomNavigationItem(
-            selectedContentColor = isDarkMode,
+            selectedContentColor = ThemeMode(light = Color.White, dark = PrimaryLight),
             unselectedContentColor = BottomNavDarkIcons,
             alwaysShowLabel = false,
             icon = {

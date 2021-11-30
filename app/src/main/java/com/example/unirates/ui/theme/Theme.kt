@@ -17,7 +17,6 @@
 
         // Texts & Icons
         primaryVariant = HeadingLight,
-        secondaryVariant = SubHeadingLight,
 
         // Bottom Navigation Icons
         onPrimary = BottomNavLightIcons
@@ -33,7 +32,6 @@
 
         // Texts & Icons
         primaryVariant = HeadingDark,
-        secondaryVariant = SubHeadingDark,
 
         // Bottom Navigation Icons
         onPrimary = BottomNavDarkIcons

@@ -19,4 +19,3 @@ val HeadingLight = Color(0xFF0F0F0F)
 val HeadingDark = Color.White
 
 val SubHeadingLight = Color(0xFFADADAD)
-val SubHeadingDark = Color.White

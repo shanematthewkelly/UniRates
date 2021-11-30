@@ -1,5 +1,6 @@
     package com.example.unirates.ui.theme
 
+    import android.annotation.SuppressLint
     import androidx.compose.foundation.isSystemInDarkTheme
     import androidx.compose.material.MaterialTheme
     import androidx.compose.material.darkColors
@@ -7,20 +8,35 @@
     import androidx.compose.runtime.Composable
     import androidx.compose.ui.graphics.Color
 
-    // Light Theme
     private val LightColorPalette = lightColors(
+
+        // Paints
         surface = CanvasLight,
         primary = PrimaryLight,
         secondary = SecondaryLight,
-        secondaryVariant = SubHeadingLight
+
+        // Texts & Icons
+        primaryVariant = HeadingLight,
+        secondaryVariant = SubHeadingLight,
+
+        // Bottom Navigation Icons
+        onPrimary = BottomNavLightIcons
     )
 
-    // Dark Theme
+    @SuppressLint("ConflictingOnColor")
     private val DarkColorPalette = darkColors(
+
+        // Paints
         surface = CanvasDark,
         primary = PrimaryDark,
         secondary = SecondaryDark,
-        secondaryVariant = SubHeadingDark
+
+        // Texts & Icons
+        primaryVariant = HeadingDark,
+        secondaryVariant = SubHeadingDark,
+
+        // Bottom Navigation Icons
+        onPrimary = BottomNavDarkIcons
     )
 
     @Composable

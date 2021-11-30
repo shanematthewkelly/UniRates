@@ -25,7 +25,7 @@ fun MyCollege() {
             content = {},
             modifier = Modifier
                 .fillMaxWidth(1f)
-                .height(Scale().heightScale(height = 180.0).dp)
+                .height(180.dp)
         )
     }
 }

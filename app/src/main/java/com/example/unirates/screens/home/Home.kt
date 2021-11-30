@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -21,7 +22,7 @@ fun Home(modifier: Modifier) {
     Scaffold(backgroundColor = MaterialTheme.colors.surface) {
         Column() {
             CustomAppBar(
-                menuItem1 = Icons.Default.Notifications,
+                menuItem1 = Icons.Outlined.Notifications,
             )
             Column(
                 modifier
@@ -39,7 +40,7 @@ fun Home(modifier: Modifier) {
                     text = "Shane Matthew Kelly",
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
-                    color = MaterialTheme.colors.secondary,
+                    color = MaterialTheme.colors.primaryVariant,
                     fontSize = Scale().fontSizeScale(fontSize = 27.0),
                     fontFamily = IBMFonts,
                     fontWeight = FontWeight.Bold

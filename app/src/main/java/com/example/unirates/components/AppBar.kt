@@ -8,6 +8,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.outlined.MoreVert
+import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -17,13 +19,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.unirates.R
+import com.example.unirates.helpers.Scale
 
 @Composable
 fun CustomAppBar(
     title: String = "",
-    menuItem1: ImageVector = Icons.Default.MoreVert,
-    menuItem2: ImageVector = Icons.Default.MoreVert,
-    menuItemColors: Color = MaterialTheme.colors.secondary,
+    menuItem1: ImageVector = Icons.Outlined.Notifications,
+    menuItem2: ImageVector = Icons.Outlined.MoreVert,
+    menuItemColors: Color = MaterialTheme.colors.primaryVariant,
 ) {
     TopAppBar(
         backgroundColor = MaterialTheme.colors.surface,
@@ -68,8 +71,7 @@ fun UserPhoto() {
         contentDescription = "User Photo",
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .size(45.dp)
+            .size(Scale().widthScale(width = 45.0).dp)
             .clip(CircleShape)
-
         )
 }

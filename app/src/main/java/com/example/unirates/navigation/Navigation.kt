@@ -1,5 +1,6 @@
 package com.example.unirates.navigation
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,6 +19,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.unirates.helpers.Scale
+import com.example.unirates.ui.theme.BottomNavDarkIcons
+import com.example.unirates.ui.theme.PrimaryLight
 
 @Composable
     fun BottomNav() {
@@ -73,8 +76,15 @@ import com.example.unirates.helpers.Scale
         destination: NavDestination?,
         controller: NavHostController
     ) {
+       val isDarkMode = if(isSystemInDarkTheme()) {
+           PrimaryLight
+        } else {
+           Color.White
+       }
+
         BottomNavigationItem(
-            selectedContentColor = MaterialTheme.colors.surface,
+            selectedContentColor = isDarkMode,
+            unselectedContentColor = BottomNavDarkIcons,
             alwaysShowLabel = false,
             icon = {
                 Icon(

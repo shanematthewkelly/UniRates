@@ -6,6 +6,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Theme Color Palette -->
-    <color name="darkTheme">#242424</color>
+    <color name="darkTheme">#0f0f0f</color>
 
 </resources>

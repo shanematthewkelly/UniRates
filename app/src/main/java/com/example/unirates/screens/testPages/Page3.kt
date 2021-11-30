@@ -29,7 +29,7 @@ fun Page3(modifier: Modifier) {
                 textAlign = TextAlign.Center,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                color = MaterialTheme.colors.secondary,
+                color = MaterialTheme.colors.primaryVariant,
                 fontSize = Scale().fontSizeScale(fontSize = 27.0),
                 fontFamily = IBMFonts,
                 fontWeight = FontWeight.Bold

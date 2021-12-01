@@ -7,7 +7,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
+import com.example.unirates.R
 import com.example.unirates.components.StackedIcon
 import com.example.unirates.helpers.Scale
 import com.example.unirates.helpers.ThemeMode
@@ -30,7 +33,7 @@ import com.example.unirates.ui.theme.SecondaryDark
         ) {
             StackedIcon(
                 outerColor = themedValue,
-                icon = Icons.Outlined.FavoriteBorder,
+                icon = ImageVector.vectorResource(id = R.drawable.ic_business),
             )
 
             StackedIcon(

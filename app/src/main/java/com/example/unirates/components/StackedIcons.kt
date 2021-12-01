@@ -1,6 +1,7 @@
 package com.example.unirates.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
@@ -11,8 +12,10 @@ import androidx.compose.material.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.unirates.helpers.ThemeMode
@@ -28,7 +31,9 @@ fun StackedIcon(
     shapeWidth: Dp = 62.dp,
     shapeHeight: Dp = 60.dp,
     shapeRadius: Dp = 20.dp,
+    onIconClicked: (Offset) -> Unit = {}
 ) {
+
     Box(contentAlignment = Alignment.Center) {
         Card(
             backgroundColor = outerColor,
@@ -47,7 +52,14 @@ fun StackedIcon(
         Icon(
             icon,
             tint = iconTint,
-            modifier = Modifier.size(iconSize),
+            modifier = Modifier
+                .size(iconSize)
+                .pointerInput(Unit) {
+                   detectTapGestures(
+                       onTap = onIconClicked,
+                   )
+                },
+
             contentDescription = null,
         )
     }

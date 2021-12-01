@@ -23,7 +23,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MyApp() {
     UniRatesTheme {
-        BottomNav()
+        Scaffold() {
+            BottomNav()
+        }
     }
 }
 

@@ -19,7 +19,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.unirates.R
-import com.example.unirates.helpers.Scale
+import com.example.unirates.helpers.widthScale
 
 @Composable
 fun CustomAppBar(
@@ -71,7 +71,7 @@ fun UserPhoto() {
         contentDescription = "User Photo",
         contentScale = ContentScale.Crop,
         modifier = Modifier
-            .size(Scale().widthScale(width = 45.0).dp)
+            .size(widthScale(width = 45.0).dp)
             .clip(CircleShape)
         )
 }

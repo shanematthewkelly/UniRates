@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
-import com.example.unirates.helpers.Scale
+import com.example.unirates.helpers.fontSizeScale
 import com.example.unirates.ui.theme.IBMFonts
 
 @Composable
@@ -16,7 +16,7 @@ fun TextContent(
     heading: String = "",
     fontColor: Color = MaterialTheme.colors.primaryVariant,
     fontWeight: FontWeight = FontWeight.Light,
-    fontSize: TextUnit = Scale().fontSizeScale(fontSize = 27.0),
+    fontSize: TextUnit = fontSizeScale(fontSize = 27.0),
     maxLines: Int = 1,
     modifier: Modifier = Modifier
 ) {

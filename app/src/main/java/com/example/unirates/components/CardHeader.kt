@@ -10,8 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.unirates.helpers.Scale
 import com.example.unirates.helpers.ThemeMode
+import com.example.unirates.helpers.fontSizeScale
 import com.example.unirates.ui.theme.PrimaryLight
 import com.example.unirates.ui.theme.SecondaryLight
 
@@ -34,7 +34,7 @@ fun CardHeader() {
                         TextContent(
                             heading = "Dun Laoghaire Institute",
                             fontColor = ThemeMode(light = Color.White, dark = PrimaryLight),
-                            fontSize = Scale().fontSizeScale(fontSize = 14.0),
+                            fontSize = fontSizeScale(fontSize = 14.0),
                             modifier = Modifier.padding(
                                 horizontal = 15.dp,
                                 vertical = 8.dp
@@ -51,7 +51,9 @@ fun CardHeader() {
                     shapeHeight = 35.dp,
                     shapeWidth = 35.dp,
                     shapeRadius = 40.dp,
-                    onIconClicked = {}
+                    onIconClicked = {
+
+                    }
                 )
             }
     }

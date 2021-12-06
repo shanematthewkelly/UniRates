@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import com.example.unirates.helpers.Scale
+import com.example.unirates.helpers.fontSizeScale
 import com.example.unirates.ui.theme.IBMFonts
 
 @Composable
@@ -30,7 +30,7 @@ import com.example.unirates.ui.theme.IBMFonts
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
                     color = MaterialTheme.colors.primaryVariant,
-                    fontSize = Scale().fontSizeScale(fontSize = 27.0),
+                    fontSize = fontSizeScale(fontSize = 27.0),
                     fontFamily = IBMFonts,
                     fontWeight = FontWeight.Bold
                 )

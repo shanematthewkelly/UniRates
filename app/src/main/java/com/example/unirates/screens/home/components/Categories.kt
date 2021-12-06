@@ -12,8 +12,8 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import com.example.unirates.R
 import com.example.unirates.components.StackedIcon
-import com.example.unirates.helpers.Scale
 import com.example.unirates.helpers.ThemeMode
+import com.example.unirates.helpers.widthScale
 import com.example.unirates.ui.theme.BottomNavDarkIcons
 import com.example.unirates.ui.theme.PrimaryDark
 import com.example.unirates.ui.theme.SecondaryDark
@@ -25,7 +25,7 @@ import com.example.unirates.ui.theme.SecondaryDark
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(
-                Scale().widthScale(width = 15.0).dp
+                widthScale(width = 15.0).dp
             ),
             modifier = Modifier.padding(
                 top = 20.dp

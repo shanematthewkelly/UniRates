@@ -1,6 +1,5 @@
 package com.example.unirates.navigation
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,8 +17,9 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.unirates.helpers.Scale
 import com.example.unirates.helpers.ThemeMode
+import com.example.unirates.helpers.heightScale
+import com.example.unirates.helpers.widthScale
 import com.example.unirates.ui.theme.BottomNavDarkIcons
 import com.example.unirates.ui.theme.PrimaryLight
 
@@ -51,8 +51,8 @@ import com.example.unirates.ui.theme.PrimaryLight
                 elevation = 8.dp,
                 modifier = Modifier
                     .padding(
-                        vertical = Scale().heightScale(height = 20.0).dp,
-                        horizontal = Scale().widthScale(width = 40.0).dp
+                        vertical = heightScale(height = 20.0).dp,
+                        horizontal = widthScale(width = 40.0).dp
                     )
                     .shadow(
                         elevation = 8.dp,

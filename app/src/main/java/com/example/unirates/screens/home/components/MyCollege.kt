@@ -4,7 +4,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,7 +15,8 @@ import androidx.compose.ui.unit.dp
 import com.example.unirates.R
 import com.example.unirates.components.CardHeader
 import com.example.unirates.components.TextContent
-import com.example.unirates.helpers.Scale
+import com.example.unirates.helpers.fontSizeScale
+import com.example.unirates.helpers.heightScale
 
 @Composable
 fun MyCollege() {
@@ -24,13 +24,13 @@ fun MyCollege() {
         Modifier
             .fillMaxSize()
             .padding(
-                vertical = Scale().heightScale(height = 30.0).dp
+                vertical = heightScale(height = 30.0).dp
             ),
         horizontalAlignment = Alignment.Start
     ) {
         TextContent(
             heading = "My College",
-            fontSize = Scale().fontSizeScale(fontSize = 18.0),
+            fontSize = fontSizeScale(fontSize = 18.0),
             fontWeight = FontWeight.Bold
 
         )

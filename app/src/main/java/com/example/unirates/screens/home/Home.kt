@@ -10,8 +10,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.unirates.components.CustomAppBar
 import com.example.unirates.components.TextContent
-import com.example.unirates.helpers.Scale
 import com.example.unirates.helpers.ThemeMode
+import com.example.unirates.helpers.fontSizeScale
+import com.example.unirates.helpers.heightScale
+import com.example.unirates.helpers.widthScale
 import com.example.unirates.screens.home.components.Categories
 import com.example.unirates.screens.home.components.MyCollege
 import com.example.unirates.ui.theme.PrimaryLight
@@ -28,14 +30,14 @@ fun Home(modifier: Modifier) {
                 modifier
                     .fillMaxWidth(1f)
                     .padding(
-                        vertical = Scale().heightScale(height = 25.0).dp,
-                        horizontal = Scale().widthScale(width = 20.0).dp
+                        vertical = heightScale(height = 25.0).dp,
+                        horizontal = widthScale(width = 20.0).dp
                     ))
             {
                 TextContent(
                     heading = "Welcome",
                     fontColor = ThemeMode(light = SubHeadingLight, dark = PrimaryLight),
-                    fontSize = Scale().fontSizeScale(fontSize = 21.0)
+                    fontSize = fontSizeScale(fontSize = 21.0)
                 )
 
                 TextContent(
